@@ -18,7 +18,7 @@ function CheckBoxList({options, isCheckedAll, onCheck}) {
         <div className="checkbox-list">
             {options.map((option, index) => {
                 return (
-                    <CheckBox key={index} name={option.name} value={option.value} tick={option.checked} onCheck={(e) => onCheck(option.value, e.target.checked)} />
+                    <CheckBox key={option.id} name={option.name} value={option.value} tick={option.checked} onCheck={(e) => onCheck(option.value, e.target.checked)} />
                 );
             })}
         </div>
@@ -40,16 +40,19 @@ class CityList extends React.Component {
             isAllSelected: false,
             checkList: [
                 {
+                    id: 1,
                     name: "city",
                     value: "bangalore",
                     checked: false,
                 },
                 {
+                    id: 2,
                     name: "city",
                     value: "chennai",
                     checked: false,
                 },
                 {
+                    id: 3,
                     name: "city",
                     value: "delhi",
                     checked: false,
